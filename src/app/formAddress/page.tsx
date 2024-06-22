@@ -60,6 +60,10 @@ const Page = () => {
           console.log("errors::: ", errors);
           return (
             <Form className=" border my-5 md:max-w-[500px]  mx-auto grid md:grid-cols-2 gap-5 p-5">
+              <p className="my-2 font-semibold italic text-sm">
+                {`#65737` + selectedId}
+              </p>
+              <br />
               <FormInput />
               <InputFIelds name="lastName" label="Last Name" />
               <InputFIelds name="address1" label="Address" />
