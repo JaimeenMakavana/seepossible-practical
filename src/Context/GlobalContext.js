@@ -9,6 +9,7 @@ export const GlobalProvider = ({ children }) => {
     const [isSignin, setIsSignin, removeIsSignin] = useLocalStorage('isSignin', false);
     const [userData, setUserData, removeUserData] = useLocalStorage('userData', {});
 
+    // for address section
     const [AddressData, setAddressData] = useState([
         {
             addressId: 1,
@@ -75,6 +76,9 @@ export const GlobalProvider = ({ children }) => {
         setIsSignup,
         removeIsSignup,
 
+        isSignin,
+        setIsSignin,
+        removeIsSignin,
 
         userData,
         setUserData,
@@ -85,9 +89,7 @@ export const GlobalProvider = ({ children }) => {
         SelectedAddressData,
         setSelectedAddressData,
 
-        isSignin,
-        setIsSignin,
-        removeIsSignin
+
     }
     return (
         <GlobalContext.Provider value={contextValue}>

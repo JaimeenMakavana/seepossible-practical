@@ -5,7 +5,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { HiOutlinePencil } from "react-icons/hi";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { TfiTrash } from "react-icons/tfi";
-import { toast } from "react-toastify";
 
 const Page = () => {
   const { AddressData, setSelectedAddressData, setAddressData, isSignin } =
@@ -43,7 +42,6 @@ const Page = () => {
 
   // redirect logic
   if (!isSignin) {
-    toast("Login Required!");
     router.push("/signup");
     return;
   }

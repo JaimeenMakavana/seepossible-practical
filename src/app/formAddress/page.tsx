@@ -17,7 +17,6 @@ const Page = () => {
   const selectedId = params.get("id");
 
   if (!isSignin) {
-    toast("Login Required!");
     router.push("/signup");
     return;
   }
